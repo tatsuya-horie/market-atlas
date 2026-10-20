@@ -26,7 +26,7 @@ def parsedate(v):
 
 def number(v):
     try:
-        n = float(re.sub(r"[，,円\\s　]", "", str(v)))
+        n = float(re.sub(r"[，,円\s　]", "", str(v)))
         if 100 < n < 10000000: return n
     except ValueError: pass
     return None
@@ -38,7 +38,7 @@ def load(url):
     for codec in ("utf-8-sig","cp932","shift_jis","utf-16"):
         try: decoded=raw.decode(codec)
         except UnicodeError: continue
-        sep="\\t" if decoded.count("\\t") > decoded.count(",")*2 else ","
+        sep="\t" if decoded.count("\t") > decoded.count(",")*2 else ","
         found={}
         for row in csv.reader(io.StringIO(decoded),delimiter=sep):
             if len(row)<2: continue
@@ -90,7 +90,7 @@ def main():
     if changed:
         obj["generated_at"]=datetime.now(ZoneInfo("Asia/Tokyo")).isoformat(timespec="seconds")
         obj["status"]="derived_official_csv_history"
-        TARGET.write_text(json.dumps(obj,ensure_ascii=False,indent=2)+"\\n",encoding="utf-8")
+        TARGET.write_text(json.dumps(obj,ensure_ascii=False,indent=2)+"\n",encoding="utf-8")
     else:
         print("All dates remain as previously labelled. No estimated prices inserted.")
 
