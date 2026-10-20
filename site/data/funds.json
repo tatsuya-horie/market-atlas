@@ -1,0 +1,126 @@
+{
+  "generated_at": "2026-10-20T12:00:00+09:00",
+  "status": "public_sources_checked_2026_10_20",
+  "funds": {
+    "allcountry": {
+      "name": "eMAXIS Slim 全世界株式（オール・カントリー）",
+      "ticker": "0331418A",
+      "unit": "円／1万口",
+      "source": "https://finance.yahoo.co.jp/quote/0331418A/history",
+      "latest": {
+        "date": "2026-10-19",
+        "value": 37683
+      },
+      "changes": {
+        "day": -0.64,
+        "week": -0.64,
+        "month": -0.29,
+        "year": null
+      },
+      "comparison_dates": {
+        "day": "2026-10-16",
+        "week": "2026-10-16",
+        "month": "2026-09-30",
+        "year": null
+      },
+      "history": [
+        {
+          "date": "2026-09-30",
+          "value": 37791
+        },
+        {
+          "date": "2026-10-01",
+          "value": 37855
+        },
+        {
+          "date": "2026-10-02",
+          "value": 37827
+        },
+        {
+          "date": "2026-10-05",
+          "value": 38026
+        },
+        {
+          "date": "2026-10-06",
+          "value": 38330
+        },
+        {
+          "date": "2026-10-07",
+          "value": 38635
+        },
+        {
+          "date": "2026-10-08",
+          "value": 38277
+        },
+        {
+          "date": "2026-10-09",
+          "value": 38109
+        },
+        {
+          "date": "2026-10-13",
+          "value": 38401
+        },
+        {
+          "date": "2026-10-14",
+          "value": 38311
+        },
+        {
+          "date": "2026-10-15",
+          "value": 37852
+        },
+        {
+          "date": "2026-10-16",
+          "value": 37926
+        },
+        {
+          "date": "2026-10-19",
+          "value": 37683
+        }
+      ]
+    },
+    "sp500fund": {
+      "name": "eMAXIS Slim 米国株式（S&P500）",
+      "ticker": "03311187",
+      "unit": "円／1万口",
+      "source": "https://finance.yahoo.co.jp/quote/03311187",
+      "latest": {
+        "date": "2026-10-19",
+        "value": 44574
+      },
+      "changes": {
+        "day": -1.24,
+        "week": -1.24,
+        "month": 0.28,
+        "year": null
+      },
+      "comparison_dates": {
+        "day": "2026-10-16",
+        "week": "2026-10-16",
+        "month": "2026-09-30",
+        "year": null
+      },
+      "history": [
+        {
+          "date": "2026-09-30",
+          "value": 44450
+        },
+        {
+          "date": "2026-10-14",
+          "value": 45567
+        },
+        {
+          "date": "2026-10-15",
+          "value": 44929
+        },
+        {
+          "date": "2026-10-16",
+          "value": 45135
+        },
+        {
+          "date": "2026-10-19",
+          "value": 44574
+        }
+      ]
+    }
+  }
+}
