@@ -16,3 +16,7 @@ GitHubの `Settings > Pages > Build and deployment > Source` で **GitHub Action
 投信の基準価額はデータに記載の基準日を確認してください。自動更新は三菱UFJ銀行のCSVフォーマットと外部アクセスに依存し、更新できない日は旧データが旧日付のまま表示されます。手動確認した値以外を推定で補完しません。ダッシュボードに表示されるのはeMAXIS Slimの2商品で、残りの保有5商品は今後の拡張対象です。
 
 This public website uses no confidential credentials, holdings or personal portfolio values.
+
+
+## Deployment retry
+GitHub Pages Source is set to GitHub Actions. This commit triggers a new deployment after that setting was enabled.
