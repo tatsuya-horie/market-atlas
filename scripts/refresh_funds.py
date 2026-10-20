@@ -64,14 +64,11 @@ def summarise(hist, previous):
     }
     changes={k: (round(100*(latest["value"]/v["value"]-1),4) if v else None) for k,v in baseline.items()}
     dates={k:(v["date"] if v else None) for k,v in baseline.items()}
+    # Keep the last 390 days of actual NAV observations without weekly sampling.
+    # At most ~270 trading days, appropriate for mobile SVG charts.
     cutoff=ld-timedelta(days=390)
-    byweek={}
-    for p in hist:
-        d=date.fromisoformat(p["date"])
-        if d>=cutoff: byweek[d.isocalendar()[:2]]=p
-    sampled=sorted(byweek.values(), key=lambda x:x["date"])
-    if not sampled or sampled[-1]["date"]!=latest["date"]: sampled.append(latest)
-    return {**previous,"latest":latest,"changes":changes,"comparison_dates":dates,"history":sampled}
+    daily=[p for p in hist if date.fromisoformat(p["date"])>=cutoff]
+    return {**previous,"latest":latest,"changes":changes,"comparison_dates":dates,"history":daily}
 
 def main():
     obj=json.loads(TARGET.read_text(encoding="utf-8"))
